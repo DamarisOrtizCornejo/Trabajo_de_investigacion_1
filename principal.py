@@ -103,9 +103,17 @@ while opcion != "4":
                         break
                     else:
                         print("\033[3;37m"+"Maximo de 3 - 20 caracteres, ingrese nuevamente")
-                        time.sleep(1)
-                        os.system("cls")
-                cedula= input("\033[0;36m"+"Cédula: ")
+                        # time.sleep(1)
+                        # os.system("cls")
+                while True:
+                    cedula = input("\033[0;36m"+"Cédula: ")
+                    cedu = len(cedula)
+                    if (cedu<10 or cedu>10):
+                        print("\033[3;37m"+"El numero de cedula debe tener 10 digitos")
+                    else:
+                        break
+                    # time.sleep(1)
+                    # os.system("cls")
                 cargo = int(input("\033[0;36m"+"Cargo: "))
                 departamento = int(input("\033[0;36m"+"Departamento: "))
                 sueldo= float(input("\033[0;36m"+"Sueldo: "))
